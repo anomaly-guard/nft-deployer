@@ -38,8 +38,8 @@ class NftCollection(Contract):
         self.item_code = code_boc(App.config["contract-codes"]["nft"]["item"]).hex()
         self.init_code(code_path=App.config["contract-codes"]["nft"]["collection"])
 
-    def init_data(self, wallet_addr, royalty_factor, royalty_base, next_item_index, collection_content_url, common_content_url):
-        self.wallet_addr = wallet_addr
+    def init_data(self, owner=None, royalty_factor=0, royalty_base=1, next_item_index=0, collection_content_url='', common_content_url=''):
+        self.wallet_addr = owner
         self.royalty_factor = royalty_factor
         self.royalty_base = royalty_base
         self.next_item_index = next_item_index

@@ -23,10 +23,12 @@ if state["balance"] < 50000000:
 
 collection = NftCollection()
 collection.init_data(
-    addr,
-    5, 100, 0,
-    'https://raw.githubusercontent.com/ton-blockchain/token-contract/main/nft/web-example/my_collection.json',
-    'https://raw.githubusercontent.com/ton-blockchain/token-contract/main/nft/web-example/'
+    owner=addr,
+    royalty_factor=5,
+    royalty_base=100,
+    next_item_index=0,
+    collection_content_url='https://raw.githubusercontent.com/ton-blockchain/token-contract/main/nft/web-example/my_collection.json',
+    common_content_url='https://raw.githubusercontent.com/ton-blockchain/token-contract/main/nft/web-example/',
 )
 collection.prepare_deploy(value=0.05, external=False)
 print("preparing to deploy nft collection contract ...")

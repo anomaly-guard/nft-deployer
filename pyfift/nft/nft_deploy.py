@@ -17,7 +17,7 @@ class DeployNFTMessage:
         "result boc:{" type Bx. "}" type
         '''
     
-    def __init__(self, index, content_url, amount, owner):
+    def __init__(self, index=0, content_url='', amount=0, owner=''):
         self.content_url = content_url
         self.index = index
         self.amount = amount

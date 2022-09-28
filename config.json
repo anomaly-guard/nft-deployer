@@ -1,4 +1,5 @@
 {
+  "network": "testnet",
   "private_key": {
     "hex": "22BF9C89AF17906234659382E8DE2E60D8550F426CCC766F54BBDC203ABD5B67"
   },

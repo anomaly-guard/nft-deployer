@@ -24,5 +24,10 @@ if state["balance"] < 50000000:
 
 
 nft_collection_addr = "kQCtSPsG5JlnAeviQAzc811k2X4aRbHm1OJmzUnpkNNoPgLJ"
-msg_body = DeployNFTMessage(0, "my_nft.json", 50000000, addr).to_boc()
+msg_body = DeployNFTMessage(
+    index=0,
+    content_url="my_nft.json",
+    amount=50000000,
+    owner=addr,
+).to_boc()
 wallet.send_to_contract(msg_body, 50000000, nft_collection_addr)
