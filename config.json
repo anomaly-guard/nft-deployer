@@ -1,0 +1,20 @@
+{
+  "private_key": {
+    "hex": "22BF9C89AF17906234659382E8DE2E60D8550F426CCC766F54BBDC203ABD5B67"
+  },
+  "fift": {
+    "libs": "fift-libs"
+  },
+  "lite-client": {
+    "config":{
+      "mainnet": "tmp/global.config.json",
+      "testnet": "tmp/testnet-global.config.json"
+    }
+  },
+  "contract-codes":{
+    "nft":{
+      "collection": "token-contract/nft/build/nft-collection-code.fif",
+      "item": "token-contract/nft/build/nft-item-code.fif"
+    }
+  }
+}
