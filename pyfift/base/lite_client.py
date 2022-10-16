@@ -78,7 +78,7 @@ class LiteClient:
         out, logs = out.decode("utf-8"), err.decode("utf-8")
         r_code = p.returncode
         if r_code != 0 and throw:
-            raise RuntimeError("Non successful exit code")
+            raise RuntimeError("Non successful exit code", logs)
         if not throw:
             return r_code, out, logs
         return out, logs
